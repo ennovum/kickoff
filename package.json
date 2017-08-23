@@ -1,0 +1,50 @@
+{
+  "name": "kickoff",
+  "version": "0.0.0",
+  "description": "Ultimate project kickoff",
+  "author": "ennovum",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "cross-env": "^5.0.5",
+    "del": "^3.0.0",
+    "del-cli": "^1.1.0",
+    "eslint": "^4.5.0",
+    "eslint-loader": "^1.9.0",
+    "file-loader": "^0.11.2",
+    "postcss": "^6.0.9",
+    "postcss-cli": "^4.1.0",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^10.0.0",
+    "postcss-loader": "^2.0.6",
+    "postcss-mixins": "^6.1.0",
+    "raw-loader": "^0.5.1",
+    "ts-loader": "^3.0.5",
+    "typescript": "^2.5.3",
+    "webpack": "^3.5.5"
+  },
+  "devDependencies": {
+    "stylelint": "^8.0.0",
+    "tslint": "^5.8.0",
+    "tslint-loader": "^3.5.3",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "config": {
+    "buildconf": "default",
+    "conf": "default"
+  },
+  "scripts": {
+    "cross-env": "node ./node_modules/cross-env/dist/bin/cross-env.js",
+    "del": "node ./node_modules/del-cli/cli.js",
+    "clear": "npm run del ./dev ./build",
+    "webpack": "node ./node_modules/webpack/bin/webpack.js",
+    "webpack-dev-server": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "postcss": "node ./node_modules/postcss-cli/bin/postcss",
+    "dev-build": "npm run clear && npm run cross-env NODE_ENV=development webpack",
+    "dev": "npm run clear && npm run cross-env NODE_ENV=development npm run webpack-dev-server",
+    "build": "npm run clear && npm run cross-env NODE_ENV=production webpack"
+  }
+}

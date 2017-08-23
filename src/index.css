@@ -1,0 +1,14 @@
+@import './deps/styles';
+
+:root {
+    --custom-margin: 10px;
+}
+
+body {
+    @extend .body--ok;
+    font-family: sans-serif;
+
+    &.body--box {
+        margin: var(--custom-margin);
+    }
+}

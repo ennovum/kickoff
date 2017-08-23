@@ -1,0 +1,14 @@
+@define-mixin bg $bgColor, $bgImage: none, $bgRepeat: no-repeat, $bgPositionX: 50%, $bgPositionY: 50% {
+    background-color: $bgColor;
+    background-image: $bgImage;
+    background-repeat: $bgRepeat;
+    background-position: $bgPositionX $bgPositionY;
+}
+
+:root {
+    --color: #afa;
+}
+
+.body--ok {
+    @mixin bg var(--color);
+}
